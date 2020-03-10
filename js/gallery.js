@@ -1,6 +1,6 @@
-function activateGallery() {
-  alert("Hello from the gallery file!");
-}
+// function activateGallery() {
+//   alert("Hello from the gallery file!");
+// }
 
 // Activates the image gallery.
 // The main task is to attach an event listener to each image in the gallery
