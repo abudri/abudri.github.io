@@ -9,9 +9,13 @@ function activateGallery() {
 
   thumbnails.forEach(function (thumbnail) {
     thumbnail.addEventListener("click", function () {
-      // Set clicked image as main image.
-      let newImageSrc = thumbnail.dataset.largeVersion;
-      mainImage.setAttribute("src", newImageSrc);
+      // Preload large images.
+      let largeVersion = new Image(); // Added in Section 11.4 Question 1
+      largeVersion.src = thumbnail.dataset.largeVersion;
+      // Set clicked image as display image.
+      // let newImageSrc = thumbnail.dataset.largeVersion; Commented out this line and next for the line right after, Section 11.4, Question 1
+      // mainImage.setAttribute("src", newImageSrc);
+      mainImage.setAttribute("src", largeVersion.src);
       mainImage.setAttribute("alt", thumbnail.dataset.description); // Section 11.2, Question 1
 
       // Change which image is current. Section 11.3
